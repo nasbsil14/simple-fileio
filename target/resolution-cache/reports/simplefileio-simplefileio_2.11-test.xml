@@ -7,7 +7,7 @@
 		revision="1.0"
 		conf="test"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20151024231159"/>
+		date="20151024233136"/>
 	<dependencies>
 		<module organisation="com.github.scala-incubator.io" name="scala-io-file_2.11">
 			<revision name="0.4.3-1" status="release" pubdate="20140612170037" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://jesseeichar.github.com/scala-io-doc/index.html" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="5">
