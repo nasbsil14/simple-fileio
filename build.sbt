@@ -6,5 +6,7 @@ resolvers += "Typesafe Repository" at "http://repo.typesafe.com/typesafe/release
 
 libraryDependencies ++= Seq(
   "com.github.scala-incubator.io" %% "scala-io-core" % "0.4.3",
-  "com.github.scala-incubator.io" %% "scala-io-file" % "0.4.3"
+  "com.github.scala-incubator.io" %% "scala-io-file" % "0.4.3",
+  "org.apache.poi" % "poi" % "3.13",
+  "org.apache.poi" % "poi-ooxml" % "3.13"
 )

@@ -1,7 +1,7 @@
 import scalax.io._
 import scalax.file.Path
 
-object Main {
+object FileIo {
   val dataDirPath = Path().toAbsolute / "data"
 
   def main(args: Array[String]): Unit = {
