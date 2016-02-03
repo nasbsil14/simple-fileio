@@ -9,8 +9,11 @@ object ExcelIo {
   val dataDirPath = Path().toAbsolute / "data" / "excel"
 
   def main (args: Array[String]) {
+    println("SimpleFileIo START")
 
+    this.newFileOperation()
 
+    println("SimpleFileIo END")
   }
 
   def newFileOperation(): Unit = {
