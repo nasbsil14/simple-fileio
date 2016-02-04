@@ -58,21 +58,30 @@ object ExcelIo {
   }
 
   def existingFileOperation(): Unit = {
-    //import scala.collection.JavaConversions._ //java <=> scalaのコレクション暗黙変換
-    import scala.collection.JavaConverters._ //java <=> scalaのコレクション明示変換
-
     //excelオブジェクト取得
     val filePath = dataDirPath / "test.xlsx"
     val workbook: Workbook = WorkbookFactory.create(filePath.jfile)
     //ファイル全体バッファ格納（メモリ使用量増）
     //val workbook: Workbook = WorkbookFactory.create(new FileInputStream("/path/to/excel/file"))
 
-    val sheet: Sheet = workbook.getSheetAt(0)
-    for (row <- sheet.asScala) {
-      for (cell <- row.asScala) {
+//    import scala.collection.JavaConverters._ //java <=> scalaのコレクション明示変換
+//    val sheet: Sheet = workbook.getSheetAt(0)
+//    for (row <- sheet.asScala) {
+//      for (cell <- row.asScala) {
+//        cell.getCellType match {
+//          case Cell.CELL_TYPE_STRING => println(cell.getStringCellValue)
+//          case _ => println("データ型不明")
+//        }
+//      }
+//    }
+
+    import scala.collection.JavaConversions._ //java <=> scalaのコレクション暗黙変換
+    val sheet2 = workbook.getSheetAt(0)
+    sheet2.foreach { row =>
+      row.foreach { cell =>
         cell.getCellType match {
           case Cell.CELL_TYPE_STRING => println(cell.getStringCellValue)
-          case _ => println("データ型不明")
+          case _ =>
         }
       }
     }
